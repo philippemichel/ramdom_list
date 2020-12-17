@@ -1782,31 +1782,26 @@ The following objects are masked from ‘package:base’:
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5saXN0ciA8LSBibG9ja3JhbmQobj0zMixcbm51bS5sZXZlbHMgPSAyLFxuaWQucHJlZml4PSdwYXRpZW50XycsXG5ibG9jay5zaXplcyA9IHNhbXBsZSgyOjYsMTYsIHJlcGxhY2UgPSBUUlVFKSAsXG5sZXZlbHM9YyhcIkFcIiwgXCJCXCIpXG4pIFxucHJpbnQobGlzdHIpXG5gYGAifQ== -->
-<pre class="r"><code>
-listr &lt;- blockrand(n=32,
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlzdHIgPC0gTlVMTFxuZm9yIChsIGluIDE6MTUpe1xuc3RyYXQgPC0gcGFzdGUwKFwiY2VudHJlIFwiLGwpXG5saXN0cCA8LSBibG9ja3JhbmQobj0zMixcbiAgICAgICAgICAgICAgICAgICBzdHJhdHVtID0gc3RyYXQsXG5udW0ubGV2ZWxzID0gMixcbmlkLnByZWZpeD0ncGF0aWVudF8nLFxuYmxvY2suc2l6ZXMgPSBzYW1wbGUoMTo2LDE2LCByZXBsYWNlID0gVFJVRSkgLFxubGV2ZWxzPWMoXCJBXCIsIFwiQlwiKVxuKSBcbmxpc3RyIDwtIHJiaW5kKGxpc3RyLGxpc3RwKVxufVxud3JpdGUuY3N2MihsaXN0cixcInJhbmRvbWlzYXRpb25fa2luZXBhbmNoXzIuY3N2XCIsIHJvdy5uYW1lcyA9IEZBTFNFKSBcbmBgYCJ9 -->
+<pre class="r"><code>listr &lt;- NULL
+for (l in 1:15){
+strat &lt;- paste0(&quot;centre &quot;,l)
+listp &lt;- blockrand(n=32,
+                   stratum = strat,
 num.levels = 2,
 id.prefix=&#39;patient_&#39;,
-block.sizes = sample(2:6,16, replace = TRUE) ,
+block.sizes = sample(1:6,16, replace = TRUE) ,
 levels=c(&quot;A&quot;, &quot;B&quot;)
 ) 
-print(listr)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MzQsIm5jb2wiOjR9LCJyZGYiOiJINHNJQUFBQUFBQUFBN1dWUzAvRE1BekgwOWRnbFpncWNlRzhFNWRWSk9VeGJvQVFFbGNFMG00bzZ3cFVsSFpxdzBPYytPU0F1OFpvaXp2WURreXk3UHliSmovYlNYZDFQb3I4a2M4WWM1Z0w1bmdRTXUvbSttSXdaTXkxWVdEQmcyN3QzMkRTTmdRdStBQjhYei93cDFLbFNhNXU5emhSQkZFaW91d1Q1WUFvaDBRNUlzcVFLTWVtd3ZlSVFwZzVZZWFFbVJObVRwZzVZZWFFbVJObVRwZ0ZZUmFFV1JCbVFaZ0ZZUmFFV1JCbVFaZ0ZZUmFFT1NMTUVXR09DSE5FbUtOOTR4QjZjU2FyQ29KZ1RuUlBxOHRhKzRTRHVUVTdtUFd6ZHJQWE5NY3dkNGw1N2JZQTM4bVNseVJEZWcvdkZWYkd3b0pZV0FjTFcyWWRORXZaWDBicW5Uc1pxNkpza21lOU92bVRIVGI3cmV4My85a0hmL2gxZWRmMFN3NkYyV2hyenB0enpMaHRiSzc1aTFaMzBzRk8ydGppVXd6T1Z1bjE0cTNJNVZPQzU4clZvcDFPZExRNXpvcjRNZndaKzgyNFN0OFRyWFJWbVVqMUJGZk9XTGxiRnE4aHJsNlgwZjVvYXRwZkF1bFBwSkxoWFFtdnRJQnVGRk9WRmprc1p0Zi9KSjd4c2xVYVF2Q2MxNXRQQnZIRGMvNDRnSTgxN0tBTHlUU1JwWnVMc2R2czZTSVozck5Pa3Qrbk9XYnNaWEtjWkhyUWd5eG5TWWJUTW9VYTZGUkFyVUpWS0luei9MaklVR2x1M09jM1VPWWpvMEVIQUFBPSJ9 -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["id"],"name":[1],"type":["S3: AsIs"],"align":["right"]},{"label":["block.id"],"name":[2],"type":["fctr"],"align":["left"]},{"label":["block.size"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["treatment"],"name":[4],"type":["fctr"],"align":["left"]}],"data":[{"1":"patient_01","2":"1","3":"6","4":"A"},{"1":"patient_02","2":"1","3":"6","4":"A"},{"1":"patient_03","2":"1","3":"6","4":"A"},{"1":"patient_04","2":"1","3":"6","4":"B"},{"1":"patient_05","2":"1","3":"6","4":"B"},{"1":"patient_06","2":"1","3":"6","4":"B"},{"1":"patient_07","2":"2","3":"12","4":"B"},{"1":"patient_08","2":"2","3":"12","4":"A"},{"1":"patient_09","2":"2","3":"12","4":"B"},{"1":"patient_10","2":"2","3":"12","4":"A"},{"1":"patient_11","2":"2","3":"12","4":"A"},{"1":"patient_12","2":"2","3":"12","4":"A"},{"1":"patient_13","2":"2","3":"12","4":"B"},{"1":"patient_14","2":"2","3":"12","4":"B"},{"1":"patient_15","2":"2","3":"12","4":"A"},{"1":"patient_16","2":"2","3":"12","4":"B"},{"1":"patient_17","2":"2","3":"12","4":"B"},{"1":"patient_18","2":"2","3":"12","4":"A"},{"1":"patient_19","2":"3","3":"4","4":"A"},{"1":"patient_20","2":"3","3":"4","4":"B"},{"1":"patient_21","2":"3","3":"4","4":"B"},{"1":"patient_22","2":"3","3":"4","4":"A"},{"1":"patient_23","2":"4","3":"6","4":"A"},{"1":"patient_24","2":"4","3":"6","4":"A"},{"1":"patient_25","2":"4","3":"6","4":"B"},{"1":"patient_26","2":"4","3":"6","4":"B"},{"1":"patient_27","2":"4","3":"6","4":"B"},{"1":"patient_28","2":"4","3":"6","4":"A"},{"1":"patient_29","2":"5","3":"6","4":"A"},{"1":"patient_30","2":"5","3":"6","4":"B"},{"1":"patient_31","2":"5","3":"6","4":"B"},{"1":"patient_32","2":"5","3":"6","4":"B"},{"1":"patient_33","2":"5","3":"6","4":"A"},{"1":"patient_34","2":"5","3":"6","4":"A"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[34]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyB3cml0ZS5jc3YyKGxpc3RyLFwicmFuZG9taXNhdGlvbl9raW5lcGFuY2hfMi5jc3ZcIiwgcm93Lm5hbWVzID0gRkFMU0UpIFxuYGBgIn0= -->
-<pre class="r"><code># write.csv2(listr,&quot;randomisation_kinepanch_2.csv&quot;, row.names = FALSE) </code></pre>
+listr &lt;- rbind(listr,listp)
+}
+write.csv2(listr,&quot;randomisation_kinepanch_2.csv&quot;, row.names = FALSE) </code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGlzdGUgZGUgcmFuZG9taXNhdGlvbiBkZSBjb21wbMOpbWVudCIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKCgpgYGB7cn0KbGlicmFyeSgiYmxvY2tyYW5kIikKbGlicmFyeSgia25pdHIiKQpsaWJyYXJ5KCJkcGx5ciIpCmBgYAoKYGBge3J9CgpsaXN0ciA8LSBibG9ja3JhbmQobj0zMiwKbnVtLmxldmVscyA9IDIsCmlkLnByZWZpeD0ncGF0aWVudF8nLApibG9jay5zaXplcyA9IHNhbXBsZSgyOjYsMTYsIHJlcGxhY2UgPSBUUlVFKSAsCmxldmVscz1jKCJBIiwgIkIiKQopIAp3cml0ZS5jc3YyKGxpc3RyLCJyYW5kb21pc2F0aW9uX2tpbmVwYW5jaF8yLmNzdiIsIHJvdy5uYW1lcyA9IEZBTFNFKSAKYGBgCgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGlzdGUgZGUgcmFuZG9taXNhdGlvbiBkZSBjb21wbMOpbWVudCIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKCgpgYGB7cn0KbGlicmFyeSgiYmxvY2tyYW5kIikKbGlicmFyeSgia25pdHIiKQpsaWJyYXJ5KCJkcGx5ciIpCmBgYAoKYGBge3J9Cmxpc3RyIDwtIE5VTEwKZm9yIChsIGluIDE6MTUpewpzdHJhdCA8LSBwYXN0ZTAoImNlbnRyZSAiLGwpCmxpc3RwIDwtIGJsb2NrcmFuZChuPTMyLAogICAgICAgICAgICAgICAgICAgc3RyYXR1bSA9IHN0cmF0LApudW0ubGV2ZWxzID0gMiwKaWQucHJlZml4PSdwYXRpZW50XycsCmJsb2NrLnNpemVzID0gc2FtcGxlKDE6NiwxNiwgcmVwbGFjZSA9IFRSVUUpICwKbGV2ZWxzPWMoIkEiLCAiQiIpCikgCmxpc3RyIDwtIHJiaW5kKGxpc3RyLGxpc3RwKQp9CndyaXRlLmNzdjIobGlzdHIsInJhbmRvbWlzYXRpb25fa2luZXBhbmNoXzIuY3N2Iiwgcm93Lm5hbWVzID0gRkFMU0UpIApgYGAKCg==</div>
 
 
 

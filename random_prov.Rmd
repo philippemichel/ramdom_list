@@ -12,13 +12,18 @@ library("dplyr")
 ```
 
 ```{r}
-
-listr <- blockrand(n=32,
+listr <- NULL
+for (l in 1:15){
+strat <- paste0("centre ",l)
+listp <- blockrand(n=32,
+                   stratum = strat,
 num.levels = 2,
 id.prefix='patient_',
-block.sizes = sample(2:6,16, replace = TRUE) ,
+block.sizes = sample(1:6,16, replace = TRUE) ,
 levels=c("A", "B")
 ) 
+listr <- rbind(listr,listp)
+}
 write.csv2(listr,"randomisation_kinepanch_2.csv", row.names = FALSE) 
 ```
 
