@@ -1,0 +1,24 @@
+---
+title: "Liste de randomisation de complément"
+output: html_notebook
+---
+
+
+
+```{r}
+library("blockrand")
+library("knitr")
+library("dplyr")
+```
+
+```{r}
+
+listr <- blockrand(n=32,
+num.levels = 2,
+id.prefix='patient_',
+block.sizes = sample(2:6,16, replace = TRUE) ,
+levels=c("A", "B")
+) 
+write.csv2(listr,"randomisation_kinepanch_2.csv", row.names = FALSE) 
+```
+
